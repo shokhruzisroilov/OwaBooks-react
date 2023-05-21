@@ -1,0 +1,60 @@
+.books{
+	width: 240px;
+	height: 460px;
+	background-color:#fff;
+	border-radius: 10px;
+	padding: 16px 24px;
+	h2{
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 128.52%;
+		color: #2B3844;
+		margin-top: 12px;
+	}
+	P{
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 128.52%;
+		color: #41B64D;
+		margin-top: 5px;
+	}
+	.like{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		h4{
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 128.52%;
+			color: #4D4D4D;
+			margin-top: 5px;
+		}
+	}
+	span{
+		display: flex;
+		justify-content: space-between;
+		margin-top: 30px;
+		.btn-info{
+			background: #2B3844;
+			border-radius: 5px;
+			padding: 5px 25px;
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 16px;
+			text-align: center;
+			color: #F8FAFC;
+			border: none;
+		}
+		.btn-read{
+			background: #41B64D;
+			border-radius: 5px;
+			padding: 5px 25px;
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 16px;
+			text-align: center;
+			color: #F8FAFC;
+			border: none;
+		}
+	}
+}

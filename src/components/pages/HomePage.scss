@@ -1,0 +1,20 @@
+main{
+	width: 100%;
+	height: max-content;
+	.main__content{
+		display: flex;
+		justify-content: space-between;
+		.main__home{
+			width: 100%;
+			height: 100%;
+			padding: 40px;
+			background-color: #F3F3F7;
+		}
+		.books__items{
+			margin-top: 40px;
+			display: flex;
+			flex-wrap: wrap;
+			gap:24px;
+		}
+	}
+}
