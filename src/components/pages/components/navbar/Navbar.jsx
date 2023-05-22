@@ -1,6 +1,6 @@
 import "./Navbar.scss"
-import books from "../../../imges/books.png"
-import stroke from "../../../imges/Stroke.png"
+import books from '../../../../imges/books.png'
+import stroke from '../../../../imges/Stroke.png'
 
 function Navbar() {
 	return (

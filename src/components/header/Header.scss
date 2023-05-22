@@ -13,9 +13,11 @@ header{
 			display: flex;
 			column-gap: 34px;
 			align-items:center;
-			button{
-				width: 139px;
-				height: 48px;
+			.dark-lite{
+				cursor: pointer;
+			}
+			.button{
+				padding: 14px 40px;
 				background: #41B64D;
 				border-radius: 6px;
 				border:none;
@@ -24,6 +26,8 @@ header{
 				line-height: 20px;
 				text-align: center;
 				color: #FFFFFF;
+				cursor: pointer;
+				text-decoration: none;
 			}
 		}
 	}

@@ -1,6 +1,5 @@
 .books{
 	width: 240px;
-	height: 460px;
 	background-color:#fff;
 	border-radius: 10px;
 	padding: 16px 24px;
@@ -22,6 +21,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		img{
+			cursor: pointer;
+		}
 		h4{
 			font-weight: 400;
 			font-size: 14px;
@@ -44,6 +46,8 @@
 			text-align: center;
 			color: #F8FAFC;
 			border: none;
+			cursor: pointer;
+			text-decoration: none;
 		}
 		.btn-read{
 			background: #41B64D;
@@ -55,6 +59,7 @@
 			text-align: center;
 			color: #F8FAFC;
 			border: none;
+			cursor: pointer;
 		}
 	}
 }

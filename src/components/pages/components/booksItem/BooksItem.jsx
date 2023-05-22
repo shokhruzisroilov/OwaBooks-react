@@ -1,6 +1,9 @@
 import "./BooksItem.scss"
-import booksImg from "../../../imges/books-img.png"
-import stroke from "../../../imges/Stroke.png"
+import { Link } from "react-router-dom"
+
+import booksImg from "../../../../imges/books-img.png"
+import stroke from '../../../../imges/Stroke.png'
+
 
 
 function booksItem() {
@@ -14,7 +17,7 @@ function booksItem() {
 				<img src={stroke} alt='stroke' />
 			</div>
 			<span>
-				<button className='btn-info'>Info</button>
+				<Link to='/home/books' className='btn-info'>Info</Link>
 				<button className='btn-read'>Read</button>
 			</span>
 		</div>

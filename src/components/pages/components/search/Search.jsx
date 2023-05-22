@@ -1,5 +1,5 @@
 import "./Search.scss"
-import searchIcon from "../../../imges/search-icon.png"
+import searchIcon from '../../../../imges/search-icon.png'
 
 function Search() {
 	return (
