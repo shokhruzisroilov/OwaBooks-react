@@ -1,17 +1,10 @@
-class UserSerivce {
-	baseUrl = 'https://jsonplaceholder.typicode.com/'
-	getData = async api => {
-		let res = fetch(`${this.baseUrl}${api}`)
-
-		if (res.ok) {
-			throw new Error('Error')
-		}
-		return (await res).json()
+async function getData(url) {
+	let res = await fetch(url)
+	if (!res.ok) {
+		throw new Error('Error please try to another way!!')
 	}
 
-	getUserList = url => {
-		return this.getData(url)
-	}
+	return await res.json()
 }
 
-export default new UserSerivce()
+export default getData

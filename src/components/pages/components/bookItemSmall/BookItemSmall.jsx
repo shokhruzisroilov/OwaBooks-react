@@ -1,13 +1,23 @@
 import "./BookItemSmall.scss"
 import bookSmall from "../../../../imges/book-small.png"
 
-function BookItemSmall() {
+function BookItemSmall({ title, author, createdAt, rate, img }) {
+	const titleStr = () => {
+		let item = { title }.title
+		if (item.length >= 20) {
+			return item.slice(0, 20) + '..'
+		} else {
+			return item
+		}
+	}
 	return (
 		<div className='books__small'>
-			<img src={bookSmall} alt='book small' />
-			<h3>Don’t Make Me think</h3>
-			<h4>Steve Krug, 2000</h4>
-			<p>4.5/5</p>
+			<img src={img} alt='book small' />
+			<h3>{titleStr()}</h3>
+			<h4>
+				{author}, {createdAt}
+			</h4>
+			<p>{rate}/5</p>
 		</div>
 	)
 }

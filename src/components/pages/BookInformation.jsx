@@ -1,6 +1,8 @@
 import "./BookInformation.scss"
 import BookItemSmall from "./components/bookItemSmall/BookItemSmall"
 import { Link } from "react-router-dom"
+import { useState, useEffect } from "react"
+import getData from "../../servises/BooksServises"
 
 
 import backArror from "../../imges/back-arrow.png"
@@ -15,8 +17,16 @@ import headPhones from "../../imges/headphones.png"
 import person from "../../imges/person.png"
 
 function BookInformation() {
+	let [bookInfoData, setBookInfoData] = useState(null)
+	useEffect(() => {
+		getData('https://owabooks.vercel.app/db.json').then(data => {
+			setBookInfoData(data)
+		})
+	}, [])
+	
+	console.log()	
 	return (
-		<div className='book__info'>
+		<div className='book__info'>	
 			<Link to='/home' className='back__info'>
 				<img src={backArror} alt='back-errow' />
 				<p>Back to results</p>
@@ -136,13 +146,19 @@ function BookInformation() {
 					Other <span>Books</span>
 				</h2>
 				<div className='o__books'>
-					<BookItemSmall />
-					<BookItemSmall />
-					<BookItemSmall />
-					<BookItemSmall />
-					<BookItemSmall />
-					<BookItemSmall />
-					<BookItemSmall />
+				{	
+					bookInfoData?.map((item) => {
+						return (
+							<BookItemSmall
+								key={item.id}
+								img={item.img}
+								title={item.title}
+								author={item.author}
+								rate={item.rate}
+							/>
+						)
+					})
+				}
 				</div>
 			</section>
 		</div>

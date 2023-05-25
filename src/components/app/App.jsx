@@ -1,15 +1,14 @@
-import './App.scss';
+import './App.scss'
 
-import { Routes, Route, Navigate } from 'react-router-dom';
-import Layouts from '../layouts/Layouts';
-import HomePage from '../pages/HomePage';
-import Login from '../pages/auth/Login';
+import { Routes, Route, Navigate } from 'react-router-dom'
+import Layouts from '../layouts/Layouts'
+import HomePage from '../pages/HomePage'
+import Login from '../pages/auth/Login'
 import Error404Page from '.././pages/error/Error404Page'
-import BookInformation from '../pages/BookInformation';
-
+import BookInformation from '../pages/BookInformation'
 
 function App() {
-  return (
+	return (
 		<>
 			<Routes>
 				<Route path='/' element={<Navigate to={'/sign-in'} />} />
@@ -24,4 +23,4 @@ function App() {
 	)
 }
 
-export default App;
+export default App

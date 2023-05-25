@@ -7,18 +7,24 @@ import moon from "../../imges/moon.png"
 function Header() {
 	return (
 		<header>
-			<div className="header__content">
-					<Link to="/home" className="header__logo">
-						<img src={owaLogo} alt="owa logo" />
+			<div className='header__content'>
+				<Link to='/home' className='header__logo'>
+					<img src={owaLogo} alt='owa logo' />
+				</Link>
+				<nav>
+					<div className='dark-lite'>
+						<img src={moon} alt='moon img' />
+					</div>
+					<Link
+						to='/sign-in'
+						className='button'
+						onClick={() => {
+							localStorage.removeItem('accessToken')
+						}}
+					>
+						Log out
 					</Link>
-					<nav>
-						<div className="dark-lite">
-							<img src={moon} alt="moon img" />
-						</div>
-						<Link to='/sign-in' className="button">
-							Log out
-						</Link>
-					</nav>
+				</nav>
 			</div>
 		</header>
 	)
