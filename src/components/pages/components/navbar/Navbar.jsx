@@ -14,14 +14,6 @@ function Navbar() {
 					<img src={stroke} alt='stroke' />
 				</div>
 			</article>
-			<article>
-				<img src={books} alt='books' />
-				<div className='text'>
-					<h3>Don’t Make Me... </h3>
-					<p>Steve Krug</p>
-					<img src={stroke} alt='stroke' />
-				</div>
-			</article>
 		</div>
 	)
 }

@@ -1,7 +1,7 @@
 .books{
 	width: 240px;
 	height: 460px;
-	background-color:#fff;
+	background-color:var(--body-bg-color);
 	border-radius: 10px;
 	padding: 16px 24px;
 	position: relative;
@@ -13,28 +13,35 @@
 		font-weight: 400;
 		font-size: 20px;
 		line-height: 128.52%;
-		color: #2B3844;
+		color: var(--body-text-color);
 		margin-top: 12px;
 	}
 	P{
 		font-weight: 400;
 		font-size: 16px;
 		line-height: 128.52%;
-		color: #41B64D;
+		color: var(--body-text1-color);
 		margin-top: 5px;
 	}
 	.like{
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		img{
+		user-select: none;
+		svg{
 			cursor: pointer;
+		}
+		.svg-lite{	
+			cursor: pointer;
+			path{
+				stroke: var(--body-text-color);
+			}
 		}
 		h4{
 			font-weight: 400;
 			font-size: 14px;
 			line-height: 128.52%;
-			color: #4D4D4D;
+			color: var(--body-text-color);
 			margin-top: 5px;
 		}
 	}
@@ -46,20 +53,20 @@
 		margin-top: 30px;
 		bottom: 16px;
 		.btn-info{
-			background: #2B3844;
+			background: var(--body-button1-color);
 			border-radius: 5px;
 			padding: 5px 25px;
 			font-weight: 500;
 			font-size: 12px;
 			line-height: 16px;
 			text-align: center;
-			color: #F8FAFC;
+			color: var(--body-text1-color);
 			border: none;
 			cursor: pointer;
 			text-decoration: none;
 		}
 		.btn-read{
-			background: #41B64D;
+			background: var(--body-button-color);
 			border-radius: 5px;
 			padding: 5px 25px;
 			font-weight: 500;

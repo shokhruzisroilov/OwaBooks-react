@@ -4,6 +4,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background-color: var(--body-home-color);
 	.container{
 		width: 400px;
 		min-height: 300px;
@@ -14,30 +15,30 @@
 			font-weight: 700;
 			font-size: 100px;
 			line-height: 130px;
-			color: #2B3844;
+			color: var(--body-text-color);
 		}
 		h2{
 			font-weight: 600;
 			font-size: 22px;
 			line-height: 24px;
-			color: #2B3844;
+			color: var(--body-text-color);
 		}
 		p{
 			font-weight: 400;
 			font-size: 18px;
 			line-height: 24px;
-			color: #2B3844;
+			color: var(--body-text-color);
 			margin-top: 12px;
 		}
 		.button{
 			font-weight: 600;
 			font-size: 16px;
 			line-height: 24px;
-			color: #41B64D;
+			color: var(--body-text1-color);
 			margin-top: 35px;	
 			padding: 13px 32px;
 			border:none;
-			border: 1px solid #41B64D;
+			border: 1px solid var(--body-text1-color);
 			border-radius: 7px;
 			text-decoration: none;
 		}
