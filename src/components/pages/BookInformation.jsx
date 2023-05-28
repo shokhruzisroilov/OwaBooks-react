@@ -3,15 +3,19 @@ import BookItemSmall from './components/bookItemSmall/BookItemSmall'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import getData from '../../servises/BooksServises'
 
 import star from '../../imges/star.png'
+import starBg from '../../imges/start-br.png'
 import location from '../../imges/location.png'
 import headPhones from '../../imges/headphones.png'
 import person from '../../imges/person.png'
 
 function BookInformation({mode}) {
+	
 	const { postId } = useParams()
 	const [data, setData] = useState([])
+	const [otherBook, setOtherBook] = useState([])
 
 	useEffect(() => {
 		fetch('https://owabooks.vercel.app/db.json')
@@ -20,6 +24,14 @@ function BookInformation({mode}) {
 				setData([data[postId - 1]])
 			})
 	}, [postId])
+
+		useEffect(() => {
+			getData('https://owabooks.vercel.app/db.json').then(data => {
+				setOtherBook(data)
+			})
+		}, [])
+		  const totalStars = 5
+			const activeStars = data[0]?.rate
 
 	return (
 		<div className='book__info'>
@@ -123,11 +135,13 @@ function BookInformation({mode}) {
 					<h4>{data[0]?.editionNumber}</h4>
 					<div className='price'>
 						<div className='price__star'>
-							<img src={star} alt='star' />
-							<img src={star} alt='star' />
-							<img src={star} alt='star' />
-							<img src={star} alt='star' />
-							<img src={star} alt='star' />
+							{[...new Array(totalStars)].map((arr, index) => {
+								return index < activeStars ? (
+									<img src={star} alt='star' />
+								) : (
+									<img src={starBg} alt='star' />
+									)
+								})}
 						</div>
 						<p>{data[0]?.rate} Ratings</p>
 						<p>{data[0]?.curentlyReading} Currently reading</p>
@@ -223,9 +237,18 @@ function BookInformation({mode}) {
 					Other <span>Books</span>
 				</h2>
 				<div className='o__books'>
-					{/* <BookItemSmall /> */}
-					{data?.map((item) => {
-						return <BookItemSmall />
+					{otherBook?.map(item => {
+						return (
+							<BookItemSmall
+								key={item.id}
+								id={item.id}
+								img={item.img}
+								title={item.title}
+								author={item.author}
+								createdAt={item.createdAt}
+								rate={item.rate}
+							/>
+						)
 					})}
 				</div>
 			</section>

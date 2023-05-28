@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 import Header from "../header/Header"
 
 
-function Layouts({theme}) {
+function Layouts() {
 	const navigate = useNavigate()
 	useEffect(() => {
 		if (!localStorage.getItem('accessToken')) {
@@ -13,7 +13,7 @@ function Layouts({theme}) {
 	})
 	return (
 		<>
-		<Header theme={theme}/>
+		<Header/>
 		<Outlet />
 		</>
 	)

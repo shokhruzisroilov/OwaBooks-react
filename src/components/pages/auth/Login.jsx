@@ -8,7 +8,7 @@ function Login() {
 	const [error, setError] = useState('')
 	const navigate = useNavigate()
 
-	const onSubmit = async e => {
+	const onSubmit = async e => {		
 		e.preventDefault()
 		let req = await fetch('https://reqres.in/api/login', {
 			method: 'POST',
@@ -32,21 +32,6 @@ function Login() {
 			setError('Invaid input! Chek your email or password and try again')
 		}
 	}
-
-	// const onSubmit = e => {
-	// 	e.preventDefault()
-
-	// 	if (email === 'ali@owa.uz' && password === 'pass12345') {
-	// 		navigate('/home')
-	// 		localStorage.setItem(
-	// 			'accessToken',
-	// 			'7eadfjahehcfq7jkdafkcvzxvbajhznxbvcayu032432r**-/234/v*cv'
-	// 		)
-	// 		setError('')
-	// 	} else {
-	// 		setError('Xatolik yuz berdi')
-	// 	}
-	// }
 	return (
 		<div className='login__form'>
 			<div className='form__container'>
@@ -55,17 +40,17 @@ function Login() {
 					<label>Email Address</label>
 					<input
 						type='text'
+						placeholder='eve.holt@reqres.in'
 						onChange={({ target }) => setEmail(target.value)}
 					/>
 					<label>Password</label>
 					<input
 						type='password'
+						placeholder='cityslicka'
 						onChange={({ target }) => setPassword(target.value)}
 					/>
 					<p className='error'>{error}</p>
-					<button type='submit' >
-						Sign In
-					</button>
+					<button type='submit'>Sign In</button>
 					<span>
 						<h3>Forget Password?</h3>
 						<h3>

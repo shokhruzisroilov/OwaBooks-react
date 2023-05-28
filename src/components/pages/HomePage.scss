@@ -1,12 +1,12 @@
 main{
 	width: 100%;
-	height: max-content;
 	.main__content{
 		display: flex;
 		justify-content: space-between;
 		.main__home{
 			width: 100%;
-			min-height: 1000px;
+			overflow-y: scroll;
+			min-height: 100vh;
 			padding: 40px;
 			background: var(--body-home-color);
 		}

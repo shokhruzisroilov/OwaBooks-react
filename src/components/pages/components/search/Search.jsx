@@ -1,20 +1,12 @@
 import "./Search.scss"
 import { useState} from "react"
 
-function Search({searchTitle, mode}) {
+function Search({onChangeStr, temp}) {
 	let [search, setSearch] = useState('')
-
-	const onSearch = (e) => {
-		setSearch(() => {
-			return e.target.value
-		})	
-		searchTitle(search)
-	}
-
 
 	return (
 		<div className='search'>
-			<input type='text' placeholder='Search' onChange={onSearch} />
+			<input type='text' placeholder='Search' onChange={(e) => {onChangeStr(e.target.value)}} value={temp} />
 			<div className='search-icon'>
 				<svg
 					width='17'
